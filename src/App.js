@@ -1,10 +1,12 @@
 import './App.css';
-import heroImageViewer from './components/hero-image-viewer'
+import HeroImageViewer from './components/heroImageViewer';
+import Main from './components/main';
 
 function App() {
   return (
     <div className="App">
-    <heroImageViewer />
+    <HeroImageViewer/>
+    <Main />
     </div>
   );
 }
