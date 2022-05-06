@@ -4,16 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-:root {
-  --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
-  --softRed: hsl(14, 88%, 65%);
-  --softViolet: hsl(273, 75%, 66%);
-  --softBlue: hsl(240, 73%, 65%);
-  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
-  --darkGrayishBlue: hsl(240, 6%, 50%);
-  --lightGrayishBlue: hsl(240, 5%, 91%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,13 +13,32 @@
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
+  font-size: .75rem /* 12px; */;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   justify-content: center;
+  align-items: center;
+}
+
+@layer components {
+
+  .mobile-hero {
+    @apply flex items-center w-9/12 mx-auto relative top-20;
+  }
+
+  .mobile-shadow {
+    @apply flex items-center w-9/12 mx-auto z-[-1]
+  }
+
+  .main-container {
+    @apply bg-white w-10/12 mx-auto rounded-2xl;
+  }
+
+  .divider {
+    @apply w-5/6 h-.1 mt-3 bg-veryDarkGrayishBlue mx-auto;
+  }
 }
 
