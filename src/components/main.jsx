@@ -6,6 +6,8 @@ import mobileImage from '../images/illustration-woman-online-mobile.svg';
 import mobileShadow from '../images/bg-pattern-mobile.svg';
 import desktopShadow from '../images/bg-pattern-desktop.svg';
 
+// Woman Image change depending on viewport width
+
 function HeroImageViewer() {
   return (
   <div className='hero-image'>
@@ -27,15 +29,26 @@ function HeroImageViewer() {
 </div>)
 };
 
+
+// Q and A 
+
 function QA(props) {
   return (
     <div className="QA">
-      <h2>{props.question}<img src={arrow} alt="arrow pointing down"></img></h2>
-      <p>{props.answer}</p>
+      <h2 className="pb-2 pr-2 text-[14px] 
+      hover:text-softRed">{props.question}
+        <img className="float-right cursor-pointer" 
+          src={arrow} alt="arrow pointing down">
+        </img>
+      </h2>
+      <p className="text-darkGrayishBlue hidden">{props.answer}
+      </p>
       <div className="divider"></div>
     </div>
   );
-} 
+};
+
+// Main body 
 
 export default function Main() {
   return (
@@ -44,7 +57,7 @@ export default function Main() {
 
   <HeroImageViewer/>
 
-  <h1 className="p-9 text-4xl font-bold text-center">FAQ</h1>
+  <h1 className="p-6 text-3xl font-bold text-center">FAQ</h1>
 
   <QA question="How many team members can I invite?" 
   answer="You can invite up to 2 additional users on the Free plan.
@@ -69,4 +82,4 @@ export default function Main() {
         Phone lines are open during normal business hours."
           />     
   </div>)
-}
+};

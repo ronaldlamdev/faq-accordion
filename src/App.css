@@ -25,20 +25,28 @@ body {
 
 @layer components {
 
+  .hero-image {
+    @apply h-20;
+  }
+
   .mobile-hero {
-    @apply flex items-center w-9/12 mx-auto relative top-20;
+    @apply flex items-center w-9/12 mx-auto relative bottom-[6.5rem];
   }
 
   .mobile-shadow {
-    @apply flex items-center w-9/12 mx-auto z-[-1]
+    @apply flex items-center w-9/12 mx-auto relative bottom-44
   }
 
   .main-container {
-    @apply bg-white w-10/12 mx-auto rounded-2xl;
+    @apply bg-white w-11/12 mx-auto rounded-2xl;
+  }
+
+  .QA {
+    @apply pl-5 pb-3 pr-6 ;
   }
 
   .divider {
-    @apply w-5/6 h-.1 mt-3 bg-veryDarkGrayishBlue mx-auto;
+    @apply w-5/6 h-.1 mt-3 bg-lightGrayishBlue mx-auto;
   }
 }
 
