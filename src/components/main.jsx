@@ -19,7 +19,7 @@ function HeroImageViewer() {
   {/* Desktop Box */}
   <picture>
     <source media="(min-width: 1440px)" srcSet={desktopBox}></source>
-    <img alt=""></img>
+    <img className="box" alt=""></img>
   </picture>
   {/* Shadow */}
   <picture>
@@ -86,12 +86,12 @@ function QA(props) {
   return (
     <div className="QA">
       <h2 id={props.qNo} className="pb-2 pr-2 text-[14px] 
-      hover:text-softRed questionHeading">{props.question}
-        <img className="float-right cursor-pointer arrowImg" 
+      hover:text-softRed">{props.question}
+        <img className="float-right cursor-pointer" 
           src={arrow} onClick={props.rotator} id={props.arrNo} alt="arrow pointing down">
         </img>
       </h2>
-      <p id={props.aNo} className="text-darkGrayishBlue hidden answerPara">{props.answer}
+      <p id={props.aNo} className="text-darkGrayishBlue hidden text-[1rem]">{props.answer}
       </p>
       <div className="divider"></div>
     </div>
@@ -106,8 +106,8 @@ export default function Main() {
   <div className="main-container">
 
   <HeroImageViewer/>
-
-  <h1 className="p-6 text-3xl font-bold text-center">FAQ</h1>
+  <div className="questions&answers">
+  <h1 className="p-6 text-3xl font-bold text-center 1440:text-left">FAQ</h1>
 
   <QA question="How many team members can I invite?" 
   answer="You can invite up to 2 additional users on the Free plan.
@@ -151,5 +151,7 @@ export default function Main() {
           aNo = 'aNo5'
           rotator = {displayAnswer5}
           />     
+  </div>
+
   </div>)
 };
